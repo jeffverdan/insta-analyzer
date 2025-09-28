@@ -1,0 +1,20 @@
+{
+  "name": "insta-analyzer",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "json2csv": "^6.0.0-alpha.2",
+    "openai": "^4.0.0",
+    "puppeteer": "^23.0.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/json2csv": "^5.0.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.0"
+  }
+}
