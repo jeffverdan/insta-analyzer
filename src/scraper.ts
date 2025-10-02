@@ -1,4 +1,4 @@
-import puppeteer, { Page } from "puppeteer";
+import { chromium, Page } from "playwright";
 
 export async function scrapeProfile(url: string, page: Page): Promise<string[]> {
     // const browser = await puppeteer.launch({ headless: false });
@@ -18,9 +18,9 @@ export async function scrapeProfile(url: string, page: Page): Promise<string[]> 
     const result: string[] = [];
     for (const el of elements) {
         result.push(el);
-        // if (el === "Esta conta é privada" || el.includes("Mostrar mais publicações")) {
-        //     break;
-        // }
+        if (el === "Essa conta é privada" || el === "Meta") {
+            break;
+        }
     };
 
     console.log(`Elements: `, result);
